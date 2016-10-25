@@ -5,6 +5,22 @@
     <title></title>
 </head>
 <body>
-
+<script>
+    function leapYear(year){
+        if(year%4==0&&year%100!=0||year%400==0){
+            return true;
+        }
+            return false;
+    }
+    var today=new Date();
+    var year=today.getFullYear ();
+    var bLeap=leapYear(year);
+    if(bLeap){
+        document.write(year+"年是闰年");
+    }
+else {
+        document.write(year+"年不是闰年")
+    }
+</script>
 </body>
 </html>
