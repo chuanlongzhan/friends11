@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .selected {
+            border: 1px solid #f00;
+            background: #fcc;
+        }
+    </style>
+</head>
+<body>
+<form action="">
+    <fieldset>
+        <legend>个人基本信息</legend>
+        <div>
+            <label  for="username">名称:</label>
+            <input id="username" type="text" value="张三丰" >
+        </div>
+        <div>
+            <label for="pass">密码：</label>
+            <input id="pass" type="text" value="*****" >
+        </div>
+        <div>
+            <label for="message">详细信息:</label>
+            <input id="message" type="text " value="倚天屠龙记" >
+        </div>
+    </fieldset>
+</form>
+<script src="jquery-1.12.4.js "></script>
+<script>
+    $(function (){
+$("input").on("focus",function () {
+    $(this).addClass("selected")
+}).on("blur",function(){
+    $(this).removeClass("selected")
+} )
+    })
+</script>
+</body>
+</html>
